@@ -328,6 +328,14 @@ footer h5 {
     color: #1B5E20;
 }
 
+.social-icons img {
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: invert(26%) sepia(97%) saturate(910%) hue-rotate(116deg) brightness(92%) contrast(101%);
+}
+
 .footer-links,
 .footer-contact,
 .footer-about {
