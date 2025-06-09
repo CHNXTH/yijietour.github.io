@@ -231,4 +231,57 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 300);  // 300ms 防抖
     });
+
+    // 多选下拉框处理
+    const interestDropdown = document.getElementById('interestDropdown');
+    const dropdownItems = document.querySelectorAll('.trip-planner .dropdown-item');
+    const selectedInterests = document.getElementById('selectedInterests');
+    const selectedValues = new Set();
+
+    // 阻止下拉菜单自动关闭
+    document.querySelector('.trip-planner .dropdown-menu').addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();  // 阻止事件冒泡
+            const value = this.getAttribute('data-value');
+            
+            if (this.classList.contains('selected')) {
+                this.classList.remove('selected');
+                selectedValues.delete(value);
+            } else {
+                this.classList.add('selected');
+                selectedValues.add(value);
+            }
+
+            // 更新按钮文本和样式
+            if (selectedValues.size === 0) {
+                interestDropdown.textContent = '请选择感兴趣的项目';
+                interestDropdown.classList.remove('has-value');
+            } else if (selectedValues.size <= 2) {
+                interestDropdown.textContent = Array.from(selectedValues).join('、');
+                interestDropdown.classList.add('has-value');
+            } else {
+                interestDropdown.textContent = `已选择 ${selectedValues.size} 个项目`;
+                interestDropdown.classList.add('has-value');
+            }
+
+            // 更新隐藏输入框的值
+            selectedInterests.value = Array.from(selectedValues).join(',');
+        });
+    });
+
+    // 点击下拉框以外的区域时关闭下拉框
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.trip-planner .dropdown')) {
+            const dropdownMenu = document.querySelector('.trip-planner .dropdown-menu');
+            const bsDropdown = bootstrap.Dropdown.getInstance(interestDropdown);
+            if (bsDropdown) {
+                bsDropdown.hide();
+            }
+        }
+    });
 }); 

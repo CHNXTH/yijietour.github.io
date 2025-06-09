@@ -117,6 +117,73 @@ body::-webkit-scrollbar {
     border: none;
 }
 
+/* 多选下拉框样式 */
+.trip-planner .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.trip-planner .dropdown-item:hover {
+    background-color: rgba(46, 125, 50, 0.1);
+}
+
+.trip-planner .dropdown-item .selected-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    position: relative;
+}
+
+.trip-planner .dropdown-item.selected .selected-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.trip-planner .dropdown-toggle::after {
+    margin-left: auto;
+}
+
+.trip-planner .dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.trip-planner .form-select.dropdown-toggle {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #6c757d;  /* 未选择时的文字颜色 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2rem;
+}
+
+.trip-planner .form-select.dropdown-toggle.has-value {
+    color: var(--text-color);  /* 选择后的文字颜色 */
+}
+
+/* 移除 Bootstrap 默认的下拉箭头 */
+.trip-planner .dropdown-toggle::after {
+    display: none;
+}
+
 /* 品牌故事 */
 .story-card {
     border: none;

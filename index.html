@@ -85,12 +85,25 @@
                             <input type="text" class="form-control" placeholder="请输入出发地">
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label">感兴趣项目</label>
-                            <select class="form-select">
-                                <option>金桃采摘</option>
-                                <option>非遗手作</option>
-                                <option>乡村漫步</option>
-                            </select>
+                            <label class="form-label">感兴趣项目（可多选）</label>
+                            <div class="dropdown">
+                                <button class="form-select dropdown-toggle" type="button" id="interestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    请选择感兴趣的项目
+                                </button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="interestDropdown">
+                                    <li><a class="dropdown-item" href="#" data-value="金桃采摘">金桃采摘 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="民俗非遗">民俗非遗 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="特色民宿">特色民宿 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="乡野漫游">乡野漫游 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="农家美食">农家美食 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="田园写生">田园写生 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="研学拓展">研学拓展 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="自然徒步">自然徒步 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="夜宿果园">夜宿果园 <span class="selected-dot"></span></a></li>
+                                    <li><a class="dropdown-item" href="#" data-value="烟火集市">烟火集市 <span class="selected-dot"></span></a></li>
+                                </ul>
+                                <input type="hidden" name="selected_interests" id="selectedInterests">
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">出行时间</label>
@@ -120,7 +133,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">品牌故事</h2>
-                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径</p>
+                  
                 </div>
                 <a href="brand-story.html" class="btn btn-outline-success">查看更多</a>
             </div>
@@ -194,7 +207,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">畅游乡野</h2>
-                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径</p>
+                 
                 </div>
                 <a href="countryside.html" class="btn btn-outline-success">查看更多</a>
             </div>
