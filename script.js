@@ -218,20 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
         searchModal.show();
     });
 
-    // 实时搜索（可选）
-    let searchTimeout;
-    searchInput.addEventListener('input', function() {
-        clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(() => {
-            const searchTerm = this.value;
-            if (searchTerm.length >= 2) {  // 至少输入2个字符才开始搜索
-                const results = performSearch(searchTerm);
-                displaySearchResults(results);
-                searchModal.show();
-            }
-        }, 300);  // 300ms 防抖
-    });
-
     // 多选下拉框处理
     const interestDropdown = document.getElementById('interestDropdown');
     const dropdownItems = document.querySelectorAll('.trip-planner .dropdown-item');
