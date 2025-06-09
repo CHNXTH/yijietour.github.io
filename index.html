@@ -29,14 +29,31 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">合作联系</a></li>
                 </ul>
             </div>
-            <form class="d-flex">
+            <form class="d-none d-lg-flex" id="searchForm">
                 <div class="search-box">
-                    <input class="form-control search-input" type="search" placeholder="搜索...">
+                    <input class="form-control search-input" type="search" placeholder="搜索..." id="searchInput">
                     <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
                 </div>
             </form>
         </div>
     </nav>
+
+    <!-- 搜索结果模态框 -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">搜索结果</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results">
+                        <!-- 搜索结果将在这里动态显示 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 横幅区域 -->
     <header class="hero-section">
@@ -99,7 +116,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">品牌故事</h2>
-                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径，打造源深金黄金桃的产业新生态。</p>
+                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径</p>
                 </div>
                 <a href="brand-story.html" class="btn btn-outline-success">查看更多</a>
             </div>
@@ -173,7 +190,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">畅游乡野</h2>
-                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径，打造源深金黄金桃的产业新生态。</p>
+                    <p class="text-start mb-0">基于果业价值信任逻辑，构建产消共同体一体化升级路径</p>
                 </div>
                 <a href="countryside.html" class="btn btn-outline-success">查看更多</a>
             </div>
