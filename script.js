@@ -61,6 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 设备检测和产品卡片样式调整
+    function adjustProductCardStyles() {
+        const isMobile = window.innerWidth <= 768;
+        const productCardImages = document.querySelectorAll('.product-card img');
+        
+        productCardImages.forEach(img => {
+            if (isMobile) {
+                img.style.height = '500px';  // 手机端高度
+            } else {
+                img.style.height = '380px';  // 电脑端保持原高度
+            }
+        });
+    }
+
+    // 初始调用
+    adjustProductCardStyles();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', adjustProductCardStyles);
+
     // 产品卡片动画
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {

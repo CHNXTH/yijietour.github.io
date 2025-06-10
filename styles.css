@@ -481,7 +481,22 @@ footer .small a:hover {
     }
     
     .product-card img {
-        height: 150px;
+        height: 280px;
+    }
+    
+    .product-card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card .price {
+        font-size: 1.15rem;
+        margin: 0.75rem 0;
     }
     
     .hero-section h1 {
