@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/logo0.png">
+    <title>品牌故事 - 驿捷乡村旅游</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="驿捷农科" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="brand-story.html">品牌故事</a></li>
+                    <li class="nav-item"><a class="nav-link" href="countryside.html">畅游乡野</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">金桃佳品</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">订购服务</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">合作联系</a></li>
+                </ul>
+            </div>
+            <form class="d-none d-lg-flex" id="searchForm">
+                <div class="search-box">
+                    <input class="form-control search-input" type="search" placeholder="搜索..." id="searchInput">
+                    <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-section" style="background-image:url('/assets/hero-farm.jpg')">
+        <div class="overlay"></div>
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height:60vh;">
+            <h1 class="display-4 fw-bold" style="font-family:'华文行楷','STXingkai',cursive;">
+                一颗金桃 三代坚守 百姓增收
+            </h1>
+            <p class="lead" style="font-family:'PingFang SC',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">走进果香乡野，遇见烟火人间</p>
+            <div class="button-group mt-4">
+                <a href="#origin" class="btn btn-outline-light btn-lg mx-2">了解品牌</a>
+                <a href="#visit" class="btn btn-success btn-lg mx-2">预约参观</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 品牌初衷 -->
+    <section id="origin" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-title text-start mb-3">品牌初衷</h2>
+                    <p class="mb-3">三代人的金桃坚守，见证了村庄从荒山到桃园的蜕变。最初，祖辈们在贫瘠的土地上种下第一棵桃树，经历无数风雨与试验，终于让金桃在这片土地上生根发芽。如今，金桃不仅是村民的致富果，更是乡村振兴的希望果。</p>
+                    <p>品牌缘起于一份对土地的热爱与责任，三代人用汗水和智慧守护着这片桃园，让荒山变成了金色果园。</p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center gap-3">
+                    <img src="/assets/old-farmer.jpg" alt="老果农照片" class="rounded shadow w-100 mb-3" style="max-width:350px;object-fit:cover;">
+                    <img src="/assets/village-change.jpg" alt="村庄变迁图" class="rounded shadow w-100" style="max-width:350px;object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section id="history" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">发展历程</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="timeline position-relative mx-auto" style="max-width:800px;">
+                        <div class="position-absolute top-0 bottom-0 start-50 translate-middle-x bg-success" style="width:4px;z-index:0;"></div>
+                        <div class="timeline-item row mb-5 align-items-center" style="z-index:1;">
+                            <div class="col-12 col-md-6 text-md-end mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">1984年</span><br>
+                                    祖父辈在福禄坪村首次发现野生黄桃资源，开启种植试验
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-start">
+                                <span class="badge bg-success fs-5">1</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center flex-md-row-reverse">
+                            <div class="col-12 col-md-6 text-md-start mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">1997年</span><br>
+                                    第二代种植人扩大规模，手工选育优质桃株，初见成果
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-end">
+                                <span class="badge bg-success fs-5">2</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center">
+                            <div class="col-12 col-md-6 text-md-end mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">2015年</span><br>
+                                    品牌正式命名为"金黄金"，进入标准化种植管理阶段
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-start">
+                                <span class="badge bg-success fs-5">3</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center flex-md-row-reverse">
+                            <div class="col-12 col-md-6 text-md-start mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">2023年</span><br>
+                                    成立山东驿捷农业科技有限公司，打造县域农业龙头企业
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-end">
+                                <span class="badge bg-success fs-5">4</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center">
+                            <div class="col-12 col-md-6 text-md-end mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">2022年</span><br>
+                                    品牌进入长三角/珠三角市场，销量突破3000吨
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-start">
+                                <span class="badge bg-success fs-5">5</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center flex-md-row-reverse">
+                            <div class="col-12 col-md-6 text-md-start mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">2025年</span><br>
+                                    金黄金品牌全域旅游启动，实现产地即景区、农田即课堂
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-end">
+                                <span class="badge bg-success fs-5">6</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item row mb-5 align-items-center">
+                            <div class="col-12 col-md-6 text-md-end mb-3 mb-md-0">
+                                <div class="bg-white rounded shadow p-3 d-inline-block">
+                                    <span class="fw-bold text-success">2025年</span><br>
+                                    金黄金桃先后获得"好品山东"权威认证、入选CCTV-17《地标品牌》专题推介，成为齐鲁农业的一面旗帜。超800户果农的增收成效、生态农业循环体系与创新模式屡次被中央和地方主流媒体报道，赢得广泛社会关注。
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-md-start">
+                                <span class="badge bg-success fs-5">7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 媒体聚焦（复用首页结构） -->
+    <section id="media" class="bg-light py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title">媒体聚焦</h2>
+                <a href="#" class="btn btn-outline-success">查看更多</a>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="media-item">
+                        <a href="https://www.qlwb.com.cn/detail/26047733.html" class="text-success">勤学反哺，创业兴乡：山建大研究生为家乡探索产居融合新路径（齐鲁晚报）</a>
+                        <span class="date">2025.05.06</span>
+                    </div>
+                    <div class="media-item">
+                        <a href="https://www.sdny.gov.cn/detail/67890" class="text-success">驿捷农科：打造"桃+"产业链，助力乡村振兴</a>
+                        <span class="date">2025.05.13</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="media-item">
+                        <a href="https://mp.weixin.qq.com/s/ARJ-Z9NRMGhet7y_1rBHSA" class="text-success">沂源金黄金桃入选第四批"好品山东"品牌（山东农业农村）</a>
+                        <span class="date">2025.05.13</span>
+                    </div>
+                    <div class="media-item">
+                        <a href="https://mp.weixin.qq.com/s/zrWCkmj4MLCRdoZKGRsjxg" class="text-success">新鲜的桃子熟啦！个大饱满，令人桃醉～（沂源旅游）</a>
+                        <span class="date">2021.08.10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专利技术 -->
+    <section id="patent" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-title text-start mb-3">专利技术</h2>
+                    <ul class="mb-3">
+                        <li>核心农业育种技术</li>
+                        <li>智能分拣系统</li>
+                        <li>区块链溯源平台</li>
+                        <li>果品深加工工艺</li>
+                    </ul>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="/assets/patent1.jpg" download class="btn btn-outline-success btn-sm">下载专利证书1</a>
+                        <a href="/assets/patent2.jpg" download class="btn btn-outline-success btn-sm">下载专利证书2</a>
+                        <a href="/assets/patent3.jpg" download class="btn btn-outline-success btn-sm">下载专利证书3</a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-wrap gap-3 justify-content-center">
+                    <img src="/assets/patent1.jpg" alt="专利证书1" class="rounded shadow" style="width:120px;height:160px;object-fit:cover;">
+                    <img src="/assets/patent2.jpg" alt="专利证书2" class="rounded shadow" style="width:120px;height:160px;object-fit:cover;">
+                    <img src="/assets/patent3.jpg" alt="专利证书3" class="rounded shadow" style="width:120px;height:160px;object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会价值 -->
+    <section id="value" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">社会价值</h2>
+            <div class="d-flex justify-content-center">
+                <img src="/assets/honor-wall.jpg" alt="荣誉证书拼图墙" class="rounded shadow" style="max-width:500px;width:100%;object-fit:cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌愿景 -->
+    <section id="vision" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-title text-start mb-3">一颗桃的乡村振兴梦</h2>
+                    <p class="mb-3">未来，品牌将持续推进数字农业布局，打造全域文旅融合新模式，助力乡村振兴与品牌出海。我们致力于让每一颗金桃都成为乡村振兴的见证者与参与者。</p>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center">
+                    <img src="/assets/vision.jpg" alt="品牌愿景图" class="rounded shadow w-100" style="max-width:350px;object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-3">
+                    <div class="footer-logos mb-4">
+                        <img src="images/logo-white.png" alt="驿捷农科" class="mb-3" height="45">
+                        <img src="images/logo2-white.png" alt="驿捷农科" class="mb-3" height="45">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" title="关注我们的微信公众号"><i class="fab fa-weixin"></i></a>
+                        <a href="#" target="_blank" title="关注我们的抖音号"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank" title="关注我们的小红书"><img src="images/REDNOTE.svg" alt="小红书" style="width: 1.5rem; height: 1.5rem;"></a>
+                        <a href="#" target="_blank" title="关注我们的微博"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>友情链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" target="_blank">山东驿捷农业科技有限公司</a></li>
+                        <li><a href="#" target="_blank">山东凤驿酒业有限公司</a></li>
+                        <li><a href="#" target="_blank">沂源县继发果业协会</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-contact">
+                    <h5>联系我们</h5>
+                    <p>电话：1234-5678910</p>
+                    <p>邮箱：contact@yjnk.cn</p>
+                    <p>地址：山东济南高新区天辰路2177号 联合财富广场4号楼506-1</p>
+                </div>
+                <div class="col-md-2 footer-about">
+                    <h5>关于</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.html" target="_blank">隐私协议</a></li>
+                        <li><a href="/terms.html" target="_blank">服务条款</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center small">
+                © 2025 驿捷(济南)乡村旅游科技有限公司 | <a href="#" target="_blank">鲁ICP备15021426号</a> | <a href="#" target="_blank">鲁公网安备 31010402001439号</a> | 网信算备310115402810501240017号
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

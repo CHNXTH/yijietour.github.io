@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/logo0.png">
+    <title>畅游乡野 - 驿捷乡村旅游</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="驿捷农科" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brand-story.html">品牌故事</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="countryside.html">畅游乡野</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">金桃佳品</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">订购服务</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">合作联系</a></li>
+                </ul>
+            </div>
+            <form class="d-none d-lg-flex" id="searchForm">
+                <div class="search-box">
+                    <input class="form-control search-input" type="search" placeholder="搜索..." id="searchInput">
+                    <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-section" style="background-image:url('/assets/countryside-hero.jpg')">
+        <div class="overlay"></div>
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height:60vh;">
+            <h1 class="display-4 fw-bold" style="font-family:'华文行楷','STXingkai',cursive;">畅游乡野 桃醉四季</h1>
+            <p class="lead" style="font-family:'PingFang SC',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">跟随果香之路，开启一段沉浸式的乡村之旅</p>
+            <div class="button-group mt-4">
+                <a href="#booking" class="btn btn-success btn-lg mx-2">预约体验</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 村庄导览图 + 特色推荐模块 -->
+    <section id="village-guide" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-title text-start mb-4">探访金桃原乡村落</h2>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3 d-flex align-items-center">
+                            <span class="fs-3 me-3">🏡</span>
+                            <div>
+                                <div class="fw-bold">桃花林道</div>
+                                <div class="text-muted small">春日花海，漫步桃林小径</div>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <span class="fs-3 me-3">🌸</span>
+                            <div>
+                                <div class="fw-bold">原生态古宅民宿</div>
+                                <div class="text-muted small">体验乡村慢生活，夜宿古宅</div>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <span class="fs-3 me-3">🧺</span>
+                            <div>
+                                <div class="fw-bold">百年老桃树</div>
+                                <div class="text-muted small">见证三代坚守，感受岁月流转</div>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <span class="fs-3 me-3">🍶</span>
+                            <div>
+                                <div class="fw-bold">果品加工坊</div>
+                                <div class="text-muted small">参观手工果干、果酒制作</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="/assets/village-map.jpg" alt="村庄导览图" class="rounded shadow w-100" style="max-width:400px;object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅游项目推荐区 -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">全家出游，不止采桃这么简单</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="/assets/pick-tour.jpg" class="card-img-top" alt="生态采摘游">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">🍑 生态采摘游</h5>
+                            <p class="card-text flex-grow-1">走进果园，亲手采摘鲜桃，感受丰收的喜悦</p>
+                            <a href="#" class="btn btn-outline-success mt-2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="/assets/wine-experience.jpg" class="card-img-top" alt="桃果酿造坊体验">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">🍷 桃果酿造坊体验</h5>
+                            <p class="card-text flex-grow-1">动手制作果干果酱、品尝鲜酿果酒，支持打包带走</p>
+                            <a href="#" class="btn btn-outline-success mt-2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="/assets/photo-tour.jpg" class="card-img-top" alt="田园打卡之旅">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">📸 田园打卡之旅</h5>
+                            <p class="card-text flex-grow-1">定制路线、打卡地标，赠送专属纪念照</p>
+                            <a href="#" class="btn btn-outline-success mt-2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="/assets/homestay.jpg" class="card-img-top" alt="民宿田园夜宿">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">🏡 民宿田园夜宿</h5>
+                            <p class="card-text flex-grow-1">一晚星空民宿+早餐+土灶晚餐，感受炊烟人家</p>
+                            <a href="#" class="btn btn-outline-success mt-2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="/assets/eco-study.jpg" class="card-img-top" alt="可持续研学之旅">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">🌿 可持续研学之旅</h5>
+                            <p class="card-text flex-grow-1">适合亲子/学生，包含自然课堂、环保实践活动</p>
+                            <a href="#" class="btn btn-outline-success mt-2">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旅游视频或图集展示区 -->
+    <section id="gallery" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">记录旅行的每一帧</h2>
+            <div id="galleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/gallery1.jpg" class="d-block w-100 rounded" alt="游客合影">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>游客合影</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/gallery2.jpg" class="d-block w-100 rounded" alt="果园剪影">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>果园剪影</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/gallery3.jpg" class="d-block w-100 rounded" alt="酿酒体验">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>酿酒体验</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="ratio ratio-16x9 rounded overflow-hidden">
+                        <video controls poster="/assets/video-cover.jpg">
+                            <source src="/assets/countryside-tour.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                    <div class="text-center mt-2 text-muted">3分钟了解乡村之旅</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游客评价模块 -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">游客怎么说</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/avatar1.jpg" alt="游客头像" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">小桃子 <span class="text-muted small">2024.5</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="text-muted small">孩子超喜欢DIY果酒，体验感满分！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/avatar2.jpg" alt="游客头像" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">果果妈 <span class="text-muted small">2024.4</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted small">民宿很干净，早餐丰富，孩子玩得很开心。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/avatar3.jpg" alt="游客头像" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">老李 <span class="text-muted small">2024.3</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted small">果园风景美，导览讲解很专业，值得推荐！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约报名模块 -->
+    <section id="booking" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">开启一场桃香之旅</h2>
+            <p class="text-center text-muted mb-4">留下联系方式，我们将为您定制专属线路</p>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form id="bookingForm" class="card shadow p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">姓名</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">联系方式</label>
+                                <input type="text" class="form-control" name="contact" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">预约日期</label>
+                                <input type="date" class="form-control" name="date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">人数</label>
+                                <input type="number" class="form-control" name="people" min="1" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">留言</label>
+                                <textarea class="form-control" name="message" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-success btn-lg">立即预约</button>
+                        </div>
+                        <div id="bookingFeedback" class="mt-3 text-center text-success d-none">预约成功！我们会尽快与您联系。</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-3">
+                    <div class="footer-logos mb-4">
+                        <img src="images/logo-white.png" alt="驿捷农科" class="mb-3" height="45">
+                        <img src="images/logo2-white.png" alt="驿捷农科" class="mb-3" height="45">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" title="关注我们的微信公众号"><i class="fab fa-weixin"></i></a>
+                        <a href="#" target="_blank" title="关注我们的抖音号"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank" title="关注我们的小红书"><img src="images/REDNOTE.svg" alt="小红书" style="width: 1.5rem; height: 1.5rem;"></a>
+                        <a href="#" target="_blank" title="关注我们的微博"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>友情链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" target="_blank">山东驿捷农业科技有限公司</a></li>
+                        <li><a href="#" target="_blank">山东凤驿酒业有限公司</a></li>
+                        <li><a href="#" target="_blank">沂源县继发果业协会</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-contact">
+                    <h5>联系我们</h5>
+                    <p>电话：1234-5678910</p>
+                    <p>邮箱：contact@yjnk.cn</p>
+                    <p>地址：山东济南高新区天辰路2177号 联合财富广场4号楼506-1</p>
+                </div>
+                <div class="col-md-2 footer-about">
+                    <h5>关于</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.html" target="_blank">隐私协议</a></li>
+                        <li><a href="/terms.html" target="_blank">服务条款</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center small">
+                © 2025 驿捷(济南)乡村旅游科技有限公司 | <a href="#" target="_blank">鲁ICP备15021426号</a> | <a href="#" target="_blank">鲁公网安备 31010402001439号</a> | 网信算备310115402810501240017号
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // 预约表单反馈
+    document.addEventListener('DOMContentLoaded', function() {
+        var bookingForm = document.getElementById('bookingForm');
+        var bookingFeedback = document.getElementById('bookingFeedback');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                bookingFeedback.classList.remove('d-none');
+                bookingForm.reset();
+                setTimeout(function(){
+                    bookingFeedback.classList.add('d-none');
+                }, 3000);
+            });
+        }
+    });
+    </script>
+</body>
+</html> 
