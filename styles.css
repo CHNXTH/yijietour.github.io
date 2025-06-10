@@ -744,4 +744,13 @@ footer .small a:hover {
         font-size: 1rem;
         padding: 0.7rem 1.5rem;
     }
+}
+
+@media (max-width: 767.98px) {
+    #brand-story .story-card {
+        margin-bottom: 1.5rem;
+    }
+    #brand-story .row > div:last-child .story-card {
+        margin-bottom: 0;
+    }
 } 
