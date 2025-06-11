@@ -685,13 +685,17 @@ footer .small a:hover {
     box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
 }
 
+.hero-section .button-group .btn-outline-light {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
 .hero-section .button-group .btn-outline-light:hover,
 .hero-section .button-group .btn-outline-light:active,
 .hero-section .button-group .btn-outline-light:focus {
-    background: #fff !important;
+    background-color: #fff !important;
     color: var(--primary-color) !important;
     border-color: #fff !important;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.08);
 }
 
 /* 响应式调整 */
@@ -771,4 +775,60 @@ footer .small a:hover {
     #brand-story .row > div:last-child .story-card {
         margin-bottom: 0;
     }
-} 
+}
+
+.ai-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    display: block;
+    max-width: 80px;
+}
+@media (max-width: 768px) {
+  .ai-logo-img {
+    margin: 0 auto 0.5rem auto !important;
+    height: 36px !important;
+    max-width: 64px;
+    display: block;
+  }
+}
+
+.ai-title-row {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    min-height: 72px;
+    gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  .ai-title-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    min-height: unset;
+    gap: 0.5rem;
+  }
+  .ai-title-row .ai-title {
+    margin-bottom: 0 !important;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .ai-logo-img {
+    margin: 0 0 0 0.75rem !important;
+    height: 32px !important;
+    max-width: 48px;
+    display: block;
+  }
+}
+
+.ai-title {
+    font-weight: 700;
+}

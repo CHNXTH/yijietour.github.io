@@ -66,9 +66,9 @@
             </h1>
             <p class="lead">走进果香乡野，遇见烟火人间</p>
             <div class="button-group">
-                <button class="btn btn-outline-light btn-lg mx-2">了解更多</button>
-                <button class="btn btn-success btn-lg mx-2">立即预定</button>
-                <button class="btn btn-outline-light btn-lg mx-2">合作联系</button>
+                <a href="#brand-story" class="btn btn-outline-light btn-lg mx-2">了解更多</a>
+                <a href="order.html" class="btn btn-success btn-lg mx-2">立即预定</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg mx-2">合作联系</a>
             </div>
         </div>
     </header>
@@ -77,52 +77,53 @@
     <section class="trip-planner">
         <div class="container">
             <div class="card shadow">
-                <div class="card-body">
-                    <h4 class="mb-4 text-start">智绘旅途，一键启程</h4>
-                    <form class="row g-3">
-                        <div class="col-md-3">
-                            <label class="form-label">出行时间</label>
-                            <input type="date" class="form-control">
-                        </div>
-                        <div class="col-md-2">
-                            <label class="form-label">出行类型</label>
-                            <select class="form-select">
-                                <option>个人</option>
-                                <option>情侣</option>
-                                <option>家庭</option>
-                                <option>团体</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">感兴趣项目</label>
-                            <div class="dropdown">
-                                <button class="form-select dropdown-toggle" type="button" id="interestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    请选择感兴趣的项目
-                                </button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="interestDropdown">
-                                    <li><a class="dropdown-item" href="#" data-value="金桃采摘">金桃采摘 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="民俗非遗">民俗非遗 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="特色民宿">特色民宿 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="乡野漫游">乡野漫游 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="农家美食">农家美食 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="田园写生">田园写生 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="研学拓展">研学拓展 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="自然徒步">自然徒步 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="夜宿果园">夜宿果园 <span class="selected-dot"></span></a></li>
-                                    <li><a class="dropdown-item" href="#" data-value="烟火集市">烟火集市 <span class="selected-dot"></span></a></li>
-                                </ul>
-                                <input type="hidden" name="selected_interests" id="selectedInterests">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">出行备注</label>
-                            <input type="text" class="form-control" placeholder="出发地/自驾/携带老人/忌口等">
-                        </div>
-                        <div class="col-md-1 d-flex align-items-end">
-                            <button class="btn btn-success w-100">开始定制</button>
-                        </div>
-                    </form>
+                <div class="card-body d-flex align-items-center flex-wrap justify-content-between ai-title-row">
+                    <h4 class="mb-4 text-start flex-grow-1 ai-title">智绘旅途，一键启程</h4>
+                    <img src="images/AIlogo.jpg" alt="AI Logo" class="ai-logo-img">
                 </div>
+                <form class="row g-1 px-3 pb-3">
+                    <div class="col-md-3">
+                        <label class="form-label">出行时间</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">出行类型</label>
+                        <select class="form-select">
+                            <option>个人</option>
+                            <option>情侣</option>
+                            <option>家庭</option>
+                            <option>团体</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">感兴趣项目</label>
+                        <div class="dropdown">
+                            <button class="form-select dropdown-toggle" type="button" id="interestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                请选择感兴趣的项目
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="interestDropdown">
+                                <li><a class="dropdown-item" href="#" data-value="金桃采摘">金桃采摘 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="民俗非遗">民俗非遗 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="特色民宿">特色民宿 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="乡野漫游">乡野漫游 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="农家美食">农家美食 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="田园写生">田园写生 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="研学拓展">研学拓展 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="自然徒步">自然徒步 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="夜宿果园">夜宿果园 <span class="selected-dot"></span></a></li>
+                                <li><a class="dropdown-item" href="#" data-value="烟火集市">烟火集市 <span class="selected-dot"></span></a></li>
+                            </ul>
+                            <input type="hidden" name="selected_interests" id="selectedInterests">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">出行备注</label>
+                        <input type="text" class="form-control" placeholder="出发地/自驾/携带老人/忌口等">
+                    </div>
+                    <div class="col-md-1 d-flex align-items-end">
+                        <button class="btn btn-success w-100">开始定制</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -133,7 +134,6 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">品牌故事</h2>
-                  
                 </div>
                 <a href="brand-story.html" class="btn btn-outline-success">查看更多</a>
             </div>
@@ -174,7 +174,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="section-title">媒体聚焦</h2>
-                <a href="#" class="btn btn-outline-success">查看更多</a>
+                <a href="brand-story.html#media" class="btn btn-outline-success">查看更多</a>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -207,7 +207,6 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="section-title text-start mb-3">畅游乡野</h2>
-                 
                 </div>
                 <a href="countryside.html" class="btn btn-outline-success">查看更多</a>
             </div>
@@ -254,7 +253,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="section-title">金桃佳品</h2>
-                <a href="#" class="btn btn-outline-success">查看更多</a>
+                <a href="products.html" class="btn btn-outline-success">查看更多</a>
             </div>
             <div class="products-slider">
                 <div class="row">
