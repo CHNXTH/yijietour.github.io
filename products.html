@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/logo0.png">
+    <title>金桃佳品 - 驿捷乡村旅游</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="驿捷农科" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brand-story.html">品牌故事</a></li>
+                    <li class="nav-item"><a class="nav-link" href="countryside.html">畅游乡野</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">金桃佳品</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">订购服务</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">合作联系</a></li>
+                </ul>
+            </div>
+            <form class="d-none d-lg-flex" id="searchForm">
+                <div class="search-box">
+                    <input class="form-control search-input" type="search" placeholder="搜索..." id="searchInput">
+                    <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- 顶部视觉 Banner -->
+    <header class="hero-section" style="background-image:url('/assets/products-hero.jpg')">
+        <div class="overlay"></div>
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height:60vh;">
+            <h1 class="display-4 fw-bold" style="font-family:'华文行楷','STXingkai',cursive;">金桃佳品 · 三代匠心臻选</h1>
+            <p class="lead" style="font-family:'PingFang SC',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">从一颗桃子，到一整条产业链的丰收故事</p>
+            <div class="button-group mt-4">
+                <a href="#variety" class="btn btn-outline-light btn-lg mx-2">了解品种</a>
+                <a href="#cta" class="btn btn-success btn-lg mx-2">立即选购</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 品种与营养价值介绍 -->
+    <section id="variety" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <h2 class="section-title text-start mb-3">黄金果色 · 果中之王</h2>
+                    <ul class="mb-3">
+                        <li>富含β-胡萝卜素（445μg/100g）为苹果的16倍</li>
+                        <li>含硒量为苹果的6倍，抗氧化抗衰老</li>
+                        <li>升糖指数仅42，适合控糖人群</li>
+                        <li>含铁量居水果之首，是缺铁性贫血辅助佳品</li>
+                        <li>高钾低钠，缓解水肿，助神经调节</li>
+                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle text-center">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>营养成分</th>
+                                    <th>金黄金桃</th>
+                                    <th>苹果</th>
+                                    <th>香蕉</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>β-胡萝卜素(μg/100g)</td><td>445</td><td>28</td><td>64</td></tr>
+                                <tr><td>硒(μg/100g)</td><td>2.4</td><td>0.4</td><td>0.7</td></tr>
+                                <tr><td>铁(mg/100g)</td><td>1.2</td><td>0.2</td><td>0.3</td></tr>
+                                <tr><td>钾(mg/100g)</td><td>210</td><td>119</td><td>256</td></tr>
+                                <tr><td>升糖指数</td><td>42</td><td>36</td><td>52</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column align-items-center gap-3">
+                    <img src="/assets/peach-cut.jpg" alt="果肉剖面" class="rounded shadow w-100 mb-3" style="max-width:320px;object-fit:cover;">
+                    <img src="/assets/peach-compare.jpg" alt="与苹果香蕉对比" class="rounded shadow w-100" style="max-width:320px;object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品特点卡片区 -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">金黄金桃 · 品质看得见</h2>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 shadow text-center p-3">
+                        <img src="/assets/feature-gold.jpg" alt="黄金果色" class="mb-3" style="width:48px;height:48px;object-fit:contain;">
+                        <h6 class="fw-bold">黄金果色</h6>
+                        <div class="text-muted small">色泽金黄，果皮透亮</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 shadow text-center p-3">
+                        <img src="/assets/feature-honey.jpg" alt="蜜汁浓郁" class="mb-3" style="width:48px;height:48px;object-fit:contain;">
+                        <h6 class="fw-bold">蜜汁浓郁</h6>
+                        <div class="text-muted small">含糖量高达15%，甜中带香</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 shadow text-center p-3">
+                        <img src="/assets/feature-firm.jpg" alt="肉质紧实" class="mb-3" style="width:48px;height:48px;object-fit:contain;">
+                        <h6 class="fw-bold">肉质紧实</h6>
+                        <div class="text-muted small">耐储耐运，不软不烂</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 shadow text-center p-3">
+                        <img src="/assets/feature-origin.jpg" alt="原产保障" class="mb-3" style="width:48px;height:48px;object-fit:contain;">
+                        <h6 class="fw-bold">原产保障</h6>
+                        <div class="text-muted small">沂源梯田高地，天然无污染</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 全产业链循环方案展示 -->
+    <section id="chain" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">从种下到餐桌，全链赋能</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-10">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle mb-2" style="width:48px;height:48px;line-height:48px;font-size:1.5rem;">1</div>
+                            <div>优果分级<br><span class="text-muted small">高端商超/电商</span></div>
+                        </div>
+                        <i class="fas fa-arrow-right fa-2x text-success d-none d-md-inline"></i>
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle mb-2" style="width:48px;height:48px;line-height:48px;font-size:1.5rem;">2</div>
+                            <div>次果加工<br><span class="text-muted small">干果、果酒、果醋</span></div>
+                        </div>
+                        <i class="fas fa-arrow-right fa-2x text-success d-none d-md-inline"></i>
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle mb-2" style="width:48px;height:48px;line-height:48px;font-size:1.5rem;">3</div>
+                            <div>果渣利用<br><span class="text-muted small">饲料化处理</span></div>
+                        </div>
+                        <i class="fas fa-arrow-right fa-2x text-success d-none d-md-inline"></i>
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle mb-2" style="width:48px;height:48px;line-height:48px;font-size:1.5rem;">4</div>
+                            <div>农旅融合<br><span class="text-muted small">采摘节、DIY体验</span></div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 text-center">
+                        <div class="col-6 col-md-3">
+                            <div class="fw-bold">亩均成本下降</div>
+                            <div class="text-success">18%</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="fw-bold">优果率提升</div>
+                            <div class="text-success">35%</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="fw-bold">深加工年产值</div>
+                            <div class="text-success">3000万元</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="fw-bold">就业岗位</div>
+                            <div class="text-success">500+ 人均增收1.8万</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品系列模块 -->
+    <section id="series" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">多种形态 · 滋味尽享</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow product-card">
+                        <img src="/assets/peach-fresh.jpg" class="card-img-top" alt="鲜桃">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">鲜桃（家庭装/礼盒）</h5>
+                            <p class="card-text flex-grow-1">新鲜采摘，现摘现发，家庭分享或送礼佳选</p>
+                            <a href="#cta" class="btn btn-outline-success mt-2">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow product-card">
+                        <img src="/assets/peach-canned.jpg" class="card-img-top" alt="黄桃罐头">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">黄桃罐头</h5>
+                            <p class="card-text flex-grow-1">营养锁鲜，老少皆宜，四季畅享</p>
+                            <a href="#cta" class="btn btn-outline-success mt-2">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow product-card">
+                        <img src="/assets/peach-dried.jpg" class="card-img-top" alt="果干">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">果干</h5>
+                            <p class="card-text flex-grow-1">健康零食，出游常备，甜而不腻</p>
+                            <a href="#cta" class="btn btn-outline-success mt-2">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow product-card">
+                        <img src="/assets/peach-vinegar.jpg" class="card-img-top" alt="果醋">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">果醋</h5>
+                            <p class="card-text flex-grow-1">酸甜平衡，调理肠胃，佐餐佳品</p>
+                            <a href="#cta" class="btn btn-outline-success mt-2">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow product-card">
+                        <img src="/assets/peach-wine.jpg" class="card-img-top" alt="桃酒">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">桃酒</h5>
+                            <p class="card-text flex-grow-1">果香微醺，佐餐佳酿，送礼自饮皆宜</p>
+                            <a href="#cta" class="btn btn-outline-success mt-2">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 中医与养生价值区 -->
+    <section id="health" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-4" style="font-family:'华文行楷','STXingkai',cursive;letter-spacing:2px;">养生之桃 · 百用之果</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="p-4 rounded shadow-sm" style="background:url('/assets/chinese-pattern.png') repeat-x top left / 120px auto;">
+                        <p class="mb-2">中医认为，桃仁可祛瘀、润肠、止咳，桃粥养颜强身，适合阳虚体弱人群。</p>
+                        <p class="mb-2">现代医学研究表明，金黄金桃富含维生素A/B/C，儿童食用助成长，老年人常食有益健康。</p>
+                        <p class="mb-0">“一桃百用”，既是美味佳果，也是养生良品。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 农旅体验 + 数字化示意模块 -->
+    <section id="agritour" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">从田间到车间，沉浸式采摘体验</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <ul class="mb-3">
+                        <li>采摘季时间：6~8月</li>
+                        <li>导览讲解 + 采摘 + DIY果醋体验</li>
+                        <li>残果回收可换体验券，预计年减碳80吨</li>
+                        <li>区块链溯源，果实全程可查</li>
+                        <li>数字农业系统，营养指标/采摘周期可视化</li>
+                    </ul>
+                    <div class="text-muted small">* 支持现场体验、线上预约，欢迎团体定制</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9 rounded overflow-hidden mb-3">
+                        <video controls poster="/assets/agritour-cover.jpg">
+                            <source src="/assets/agritour.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                    <div class="text-center text-muted">数字化采摘体验演示</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价模块 -->
+    <section id="reviews" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">真实口碑 · 他们说好才是真的好</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/review-mom.jpg" alt="宝妈评价" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">宝妈 <span class="text-muted small">2024.6</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="text-muted small">香甜好吃，孩子连吃三个！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/review-fitness.jpg" alt="健身族评价" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">健身族 <span class="text-muted small">2024.5</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted small">比进口桃更甜更糯，健身补能首选！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <img src="/assets/review-senior.jpg" alt="中老年人评价" class="rounded-circle mb-3" style="width:64px;height:64px;object-fit:cover;">
+                            <h6 class="mb-1">中老年人 <span class="text-muted small">2024.4</span></h6>
+                            <div class="mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <p class="text-muted small">口感细腻，吃着放心，家人都喜欢。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 转化区（首页卡片样式复用） -->
+    <section id="cta" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">立即购买 · 新鲜直达</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="#" class="product-image">
+                            <img src="/assets/peach-giftbox.jpg" alt="精选鲜桃礼盒">
+                        </a>
+                        <h4>精选鲜桃礼盒</h4>
+                        <p>金黄果肉，现摘现发，送礼自用皆宜</p>
+                        <div class="price">¥168/箱</div>
+                        <a href="#" class="btn btn-success btn-buy">立即选购 →</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="#" class="product-image">
+                            <img src="/assets/peach-dried2.jpg" alt="金桃果干">
+                        </a>
+                        <h4>金桃果干</h4>
+                        <p>健康零食，随时随地享受美味</p>
+                        <div class="price">¥29.9/袋</div>
+                        <a href="#" class="btn btn-success btn-buy">立即选购 →</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="#" class="product-image">
+                            <img src="/assets/peach-wine2.jpg" alt="桃果酒">
+                        </a>
+                        <h4>桃果酒</h4>
+                        <p>果香微醺，佐餐佳酿</p>
+                        <div class="price">¥88/瓶</div>
+                        <a href="#" class="btn btn-success btn-buy">立即选购 →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <span class="text-muted">鲜桃直发，采摘即包，限时特惠中，错过再等一年！</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-3">
+                    <div class="footer-logos mb-4">
+                        <img src="images/logo-white.png" alt="驿捷农科" class="mb-3" height="45">
+                        <img src="images/logo2-white.png" alt="驿捷农科" class="mb-3" height="45">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" title="关注我们的微信公众号"><i class="fab fa-weixin"></i></a>
+                        <a href="#" target="_blank" title="关注我们的抖音号"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank" title="关注我们的小红书"><img src="images/REDNOTE.svg" alt="小红书" style="width: 1.5rem; height: 1.5rem;"></a>
+                        <a href="#" target="_blank" title="关注我们的微博"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>友情链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" target="_blank">山东驿捷农业科技有限公司</a></li>
+                        <li><a href="#" target="_blank">山东凤驿酒业有限公司</a></li>
+                        <li><a href="#" target="_blank">沂源县继发果业协会</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-contact">
+                    <h5>联系我们</h5>
+                    <p>电话：1234-5678910</p>
+                    <p>邮箱：contact@yjnk.cn</p>
+                    <p>地址：山东济南高新区天辰路2177号 联合财富广场4号楼506-1</p>
+                </div>
+                <div class="col-md-2 footer-about">
+                    <h5>关于</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.html" target="_blank">隐私协议</a></li>
+                        <li><a href="/terms.html" target="_blank">服务条款</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center small">
+                © 2025 驿捷(济南)乡村旅游科技有限公司 | <a href="#" target="_blank">鲁ICP备15021426号</a> | <a href="#" target="_blank">鲁公网安备 31010402001439号</a> | 网信算备310115402810501240017号
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

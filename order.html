@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/logo0.png">
+    <title>订购服务 - 驿捷乡村旅游</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="驿捷农科" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brand-story.html">品牌故事</a></li>
+                    <li class="nav-item"><a class="nav-link" href="countryside.html">畅游乡野</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">金桃佳品</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html">订购服务</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">合作联系</a></li>
+                </ul>
+            </div>
+            <form class="d-none d-lg-flex" id="searchForm">
+                <div class="search-box">
+                    <input class="form-control search-input" type="search" placeholder="搜索..." id="searchInput">
+                    <button class="btn search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-section" style="background-image:url('/assets/order-hero.jpg')">
+        <div class="overlay"></div>
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height:60vh;">
+            <h1 class="display-4 fw-bold" style="font-family:'华文行楷','STXingkai',cursive;">订购服务</h1>
+            <p class="lead" style="font-family:'PingFang SC',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">一站式乡村体验，轻松预约，畅享美好旅程</p>
+        </div>
+    </header>
+
+    <!-- 订购项目展示 -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">精选服务项目</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow text-center">
+                        <img src="/assets/order-pick.jpg" class="card-img-top" alt="金桃采摘体验">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">金桃采摘体验</h5>
+                            <p class="card-text flex-grow-1">跟随果农走进桃园，体验采摘乐趣，畅游多条采摘路线。</p>
+                            <div class="mb-2 text-success">参考价格：¥68-128/人</div>
+                            <button class="btn btn-success mt-auto order-btn">立即预定</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow text-center">
+                        <img src="/assets/order-folk.jpg" class="card-img-top" alt="非遗民俗互动">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">非遗民俗互动</h5>
+                            <p class="card-text flex-grow-1">体验竹编、土布、剪纸等非遗手作，感受乡土文化魅力。</p>
+                            <div class="mb-2 text-success">参考价格：¥39-99/人</div>
+                            <button class="btn btn-success mt-auto order-btn">立即预定</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow text-center">
+                        <img src="/assets/order-homestay.jpg" class="card-img-top" alt="特色民宿住宿">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">特色民宿住宿</h5>
+                            <p class="card-text flex-grow-1">独栋/合住任选，享受田园夜色与地道农家美食。</p>
+                            <div class="mb-2 text-success">参考价格：¥168-399/间夜</div>
+                            <button class="btn btn-success mt-auto order-btn">立即预定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / 使用须知模块 -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">常见问题 / 使用须知</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button">如何预约？</button>
+                    </h2>
+                    <div class="accordion-collapse collapse">
+                        <div class="accordion-body">点击"立即预定"按钮，填写预约信息，提交后客服会与您确认。</div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button">需要提前多长时间？</button>
+                    </h2>
+                    <div class="accordion-collapse collapse">
+                        <div class="accordion-body">建议提前3天预约，节假日请尽早预定。</div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button">是否可以团体定制？</button>
+                    </h2>
+                    <div class="accordion-collapse collapse">
+                        <div class="accordion-body">支持团体定制，欢迎企业、学校、亲子团体咨询。</div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button">退款政策？</button>
+                    </h2>
+                    <div class="accordion-collapse collapse">
+                        <div class="accordion-body">如因天气等不可抗力取消，可全额退款，其他情况请联系客服协商。</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq5">
+                        <button class="accordion-button collapsed" type="button">客服电话：400-169-9166（每日 9:00-18:00）</button>
+                    </h2>
+                    <div class="accordion-collapse collapse">
+                        <div class="accordion-body">如有疑问欢迎随时致电，我们将竭诚为您服务！</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 地图与交通方式 -->
+    <section id="map" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">地图与交通方式</h2>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+                        <iframe src="https://www.amap.com/place/B0FFG0Q9XG" frameborder="0" allowfullscreen title="高德地图" style="border:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><span class="me-2">🚗</span>自驾导航：输入"福禄坪果园"</li>
+                        <li class="list-group-item"><span class="me-2">🚕</span>包车接送：<a href="#" class="text-success">乡村旅游专线预约</a></li>
+                        <li class="list-group-item"><span class="me-2">🚄</span>高铁：距<strong>黄山北站</strong>约30分钟车程，可接驳</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约表单弹窗 -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">预约服务</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="orderModalClose"></button>
+                </div>
+                <form id="orderForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">姓名</label>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">手机号</label>
+                            <input type="tel" class="form-control" name="phone" required pattern="^1[3-9]\d{9}$">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">预约项目</label>
+                            <select class="form-select" name="project" required>
+                                <option value="金桃采摘体验">金桃采摘体验</option>
+                                <option value="非遗民俗互动">非遗民俗互动</option>
+                                <option value="特色民宿住宿">特色民宿住宿</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">人数</label>
+                            <input type="number" class="form-control" name="people" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">预约日期</label>
+                            <input type="date" class="form-control" name="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">备注</label>
+                            <textarea class="form-control" name="message" rows="2"></textarea>
+                        </div>
+                        <div id="orderFeedback" class="text-success d-none">预约成功！我们会尽快与您联系。</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">提交预约</button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-3">
+                    <div class="footer-logos mb-4">
+                        <img src="images/logo-white.png" alt="驿捷农科" class="mb-3" height="45">
+                        <img src="images/logo2-white.png" alt="驿捷农科" class="mb-3" height="45">
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" title="关注我们的微信公众号"><i class="fab fa-weixin"></i></a>
+                        <a href="#" target="_blank" title="关注我们的抖音号"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank" title="关注我们的小红书"><img src="images/REDNOTE.svg" alt="小红书" style="width: 1.5rem; height: 1.5rem;"></a>
+                        <a href="#" target="_blank" title="关注我们的微博"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>友情链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" target="_blank">山东驿捷农业科技有限公司</a></li>
+                        <li><a href="#" target="_blank">山东凤驿酒业有限公司</a></li>
+                        <li><a href="#" target="_blank">沂源县继发果业协会</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-contact">
+                    <h5>联系我们</h5>
+                    <p>电话：1234-5678910</p>
+                    <p>邮箱：contact@yjnk.cn</p>
+                    <p>地址：山东济南高新区天辰路2177号 联合财富广场4号楼506-1</p>
+                </div>
+                <div class="col-md-2 footer-about">
+                    <h5>关于</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.html" target="_blank">隐私协议</a></li>
+                        <li><a href="/terms.html" target="_blank">服务条款</a></li>
+                        <li><a href="/about.html">关于我们</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center small">
+                © 2025 驿捷(济南)乡村旅游科技有限公司 | <a href="#" target="_blank">鲁ICP备15021426号</a> | <a href="#" target="_blank">鲁公网安备 31010402001439号</a> | 网信算备310115402810501240017号
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // FAQ手风琴交互
+    document.querySelectorAll('.accordion-button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var item = btn.closest('.accordion-item');
+            var collapse = item.querySelector('.accordion-collapse');
+            var isOpen = collapse.classList.contains('show');
+            document.querySelectorAll('.accordion-collapse').forEach(function(c) {
+                c.classList.remove('show');
+            });
+            if (!isOpen) {
+                collapse.classList.add('show');
+            }
+        });
+    });
+    // 预约弹窗交互
+    var orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    document.querySelectorAll('.order-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            orderModal.show();
+        });
+    });
+    document.getElementById('orderModalClose').addEventListener('click', function() {
+        orderModal.hide();
+    });
+    // 表单提交反馈
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('orderFeedback').classList.remove('d-none');
+        setTimeout(function(){
+            document.getElementById('orderFeedback').classList.add('d-none');
+            orderModal.hide();
+        }, 2000);
+        this.reset();
+    });
+    </script>
+</body>
+</html> 
