@@ -1,0 +1,32 @@
+[
+  {
+    "title": "首页",
+    "url": "index.html",
+    "content": "金桃牵三产, 旅途寄乡情。走进果香乡野，遇见烟火人间。"
+  },
+  {
+    "title": "品牌故事",
+    "url": "brand-story.html",
+    "content": "一颗金桃 三代坚守 百姓增收。品牌起源、发展历程、品牌理念。"
+  },
+  {
+    "title": "畅游乡野",
+    "url": "countryside.html",
+    "content": "探索自然之美，体验乡村生活。村庄导览、旅游项目、游客评价。"
+  },
+  {
+    "title": "金桃佳品",
+    "url": "products.html",
+    "content": "金桃佳品 · 匠心臻选。从一颗桃子，到一整条产业链的丰收故事。"
+  },
+  {
+    "title": "订购服务",
+    "url": "order.html",
+    "content": "一站式乡村体验，轻松预约，畅享美好旅程。服务项目、FAQ、预约表单。"
+  },
+  {
+    "title": "合作联系",
+    "url": "contact.html",
+    "content": "携手共赢，共创乡村振兴新模式。合作类型、合作表单、联系方式。"
+  }
+] 

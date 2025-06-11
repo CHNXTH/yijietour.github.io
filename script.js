@@ -1,3 +1,11 @@
+(function() {
+    var isOrderOrContact = window.location.pathname.endsWith('order.html') || window.location.pathname.endsWith('contact.html');
+    if (isOrderOrContact && window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+        window.scrollTo(0, 0);
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
     // 导航栏滚动效果
     window.addEventListener('scroll', function() {
@@ -30,18 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 平滑滚动
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    });
+    }
 
     // 表单验证
     const tripForm = document.querySelector('.trip-planner form');
@@ -140,86 +150,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 搜索功能实现
+    // 全站搜索功能
     const searchForm = document.getElementById('searchForm');
     const searchResults = document.getElementById('searchResults');
-    const searchModal = new bootstrap.Modal(document.getElementById('searchModal'));
-    
-    // 定义要搜索的内容区域
-    const searchableAreas = [
-        { selector: '.hero-section h1, .hero-section p', category: '首页横幅' },
-        { selector: '.trip-planner .card', category: '旅程定制' },
-        { selector: '#brand-story', category: '品牌故事' },
-        { selector: '#countryside', category: '畅游乡野' },
-        { selector: '#products', category: '金桃佳品' },
-        { selector: '.media-item', category: '媒体聚焦' },
-        { selector: '.footer-contact, .footer-about', category: '联系信息' }
-    ];
+    let searchModal;
+    try {
+        searchModal = new bootstrap.Modal(document.getElementById('searchModal'));
+    } catch(e) {}
 
-    function performSearch(searchTerm) {
+    // 优化本页面内容搜索：覆盖所有可见文字节点，且每个元素只展示一次
+    function performPageSearch(searchTerm) {
         if (!searchTerm.trim()) {
             return [];
         }
-
+        const keyword = searchTerm.trim().toLowerCase();
         const results = [];
-        searchableAreas.forEach(area => {
-            const elements = document.querySelectorAll(area.selector);
-            elements.forEach(element => {
-                const text = element.textContent.toLowerCase();
-                const searchTermLower = searchTerm.toLowerCase();
-                
-                if (text.includes(searchTermLower)) {
-                    // 提取匹配文本的上下文
-                    let context = text;
-                    if (text.length > 100) {
-                        const index = text.indexOf(searchTermLower);
-                        const start = Math.max(0, index - 50);
-                        const end = Math.min(text.length, index + 50);
-                        context = '...' + text.substring(start, end) + '...';
-                    }
-                    
-                    // 高亮搜索词
-                    const highlightedContext = context.replace(
-                        new RegExp(searchTerm, 'gi'),
-                        match => `<span class="highlight">${match}</span>`
-                    );
-                    
-                    results.push({
-                        category: area.category,
-                        context: highlightedContext,
-                        element: element
-                    });
+        const seen = new Set();
+        // 只搜索可见元素（不包括script、style、head等）
+        function isVisible(el) {
+            return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+        }
+        // 递归遍历body下所有元素，只保留最内层命中的元素
+        function traverse(node) {
+            if (node.nodeType === 1 && isVisible(node)) {
+                if (["SCRIPT","STYLE","HEAD","NOSCRIPT","TITLE","META","LINK"].includes(node.tagName)) return;
+                let hasChildHit = false;
+                for (let child of node.children) {
+                    if (traverse(child)) hasChildHit = true;
                 }
-            });
-        });
-        
+                // 如果有子元素已命中，则父元素不再作为结果
+                if (hasChildHit) return true;
+                const text = node.innerText || node.textContent || '';
+                const textLower = text.trim().toLowerCase();
+                if (textLower && textLower.includes(keyword)) {
+                    if (!seen.has(node)) {
+                        let context = text;
+                        if (text.length > 100) {
+                            const index = textLower.indexOf(keyword);
+                            const start = Math.max(0, index - 50);
+                            const end = Math.min(text.length, index + 50);
+                            context = '...' + text.substring(start, end) + '...';
+                        }
+                        const highlightedContext = context.replace(
+                            new RegExp(searchTerm, 'gi'),
+                            match => `<span class="highlight">${match}</span>`
+                        );
+                        results.push({
+                            category: node.tagName.toLowerCase(),
+                            context: highlightedContext,
+                            element: node
+                        });
+                        seen.add(node);
+                    }
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+        traverse(document.body);
         return results;
     }
 
-    function displaySearchResults(results) {
+    function displayPageSearchResults(results) {
+        if (!searchResults) return;
         if (results.length === 0) {
             searchResults.innerHTML = '<div class="search-no-results">未找到相关内容</div>';
             return;
         }
-
-        const resultsHTML = results.map(result => `
+        searchResults.innerHTML = results.map(result => `
             <div class="search-result-item">
                 <h6>${result.category}</h6>
                 <p>${result.context}</p>
             </div>
         `).join('');
-
-        searchResults.innerHTML = resultsHTML;
-
-        // 为搜索结果添加点击事件
+        // 点击结果高亮定位
         const resultItems = searchResults.querySelectorAll('.search-result-item');
         resultItems.forEach((item, index) => {
             item.addEventListener('click', () => {
                 const targetElement = results[index].element;
-                searchModal.hide();
+                if (searchModal) searchModal.hide();
                 setTimeout(() => {
                     targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    // 添加临时高亮效果
                     targetElement.style.backgroundColor = 'rgba(46, 125, 50, 0.1)';
                     setTimeout(() => {
                         targetElement.style.backgroundColor = '';
@@ -229,14 +241,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 处理搜索表单提交
-    searchForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const searchTerm = searchInput.value;
-        const results = performSearch(searchTerm);
-        displaySearchResults(results);
-        searchModal.show();
-    });
+    if (searchForm && searchInput && searchResults) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = searchInput.value;
+            const results = performPageSearch(searchTerm);
+            displayPageSearchResults(results);
+            if (searchModal) searchModal.show();
+        });
+    }
 
     // 多选下拉框处理
     const interestDropdown = document.getElementById('interestDropdown');
@@ -290,4 +303,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // 已在HTML <head>中阻止锚点跳转，这里无需再补救
 }); 

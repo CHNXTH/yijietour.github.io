@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+    if (location.hash && /order\.html$/.test(location.pathname)) {
+      location.replace(location.pathname + location.search);
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -39,11 +44,15 @@
     </nav>
 
     <!-- Hero Banner -->
-    <header class="hero-section" style="background-image:url('/assets/order-hero.jpg')">
+    <header class="hero-section" style="background-image:url('images/order-hero.jpg')">
         <div class="overlay"></div>
         <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height:60vh;">
             <h1 class="display-4 fw-bold" style="font-family:'华文行楷','STXingkai',cursive;">订购服务</h1>
             <p class="lead" style="font-family:'PingFang SC',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">一站式乡村体验，轻松预约，畅享美好旅程</p>
+            <div class="button-group mt-4">
+                <a href="#services" class="btn btn-outline-light btn-lg mx-2">活动预定</a>
+                <a href="#services" class="btn btn-success btn-lg mx-2">民宿预定</a>
+            </div>
         </div>
     </header>
 
@@ -133,29 +142,6 @@
                     <div class="accordion-collapse collapse">
                         <div class="accordion-body">如有疑问欢迎随时致电，我们将竭诚为您服务！</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 地图与交通方式 -->
-    <section id="map" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="section-title text-center mb-4">地图与交通方式</h2>
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-8">
-                    <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-                        <iframe src="https://www.amap.com/place/B0FFG0Q9XG" frameborder="0" allowfullscreen title="高德地图" style="border:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><span class="me-2">🚗</span>自驾导航：输入"福禄坪果园"</li>
-                        <li class="list-group-item"><span class="me-2">🚕</span>包车接送：<a href="#" class="text-success">乡村旅游专线预约</a></li>
-                        <li class="list-group-item"><span class="me-2">🚄</span>高铁：距<strong>黄山北站</strong>约30分钟车程，可接驳</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -294,5 +280,21 @@
         this.reset();
     });
     </script>
+    <!-- 搜索结果模态框 -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">搜索结果</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchResults" class="search-results">
+                        <!-- 搜索结果将在这里动态显示 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html> 
