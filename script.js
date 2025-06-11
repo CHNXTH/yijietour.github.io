@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         productCardImages.forEach(img => {
             if (isMobile) {
-                img.style.height = '450px';  // 手机端高度
+                img.style.height = '420px';  // 手机端高度
             } else {
                 img.style.height = '380px';  // 电脑端保持原高度
             }
