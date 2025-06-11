@@ -832,3 +832,12 @@ footer .small a:hover {
 .ai-title {
     font-weight: 700;
 }
+
+.trip-animate.opacity-0 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+}
+.trip-animate.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
