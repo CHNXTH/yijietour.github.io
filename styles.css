@@ -541,10 +541,9 @@ footer .small a:hover {
         padding-right: 1rem;
     }
 
-    /* 隐藏合作联系按钮 */
-    .nav-item a[href="contact.html"],
+    /* 只隐藏横幅按钮区的合作联系，不影响导航栏菜单 */
     .hero-section .button-group .btn-outline-light:last-child {
-        display: none;
+        display: none !important;
     }
 }
 
