@@ -305,4 +305,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 已在HTML <head>中阻止锚点跳转，这里无需再补救
+
+    // 全局滚动淡入动效（增强版，支持重复触发）
+    (function() {
+        function onScrollFadeIn() {
+            var elements = document.querySelectorAll('.fadein-on-scroll');
+            var windowHeight = window.innerHeight;
+            elements.forEach(function(el) {
+                var rect = el.getBoundingClientRect();
+                if (rect.top < windowHeight * 0.95 && rect.bottom > 0) {
+                    el.classList.add('fadein-visible');
+                } else {
+                    el.classList.remove('fadein-visible');
+                }
+            });
+        }
+        document.addEventListener('scroll', onScrollFadeIn, { passive: true });
+        window.addEventListener('resize', onScrollFadeIn);
+        window.addEventListener('DOMContentLoaded', onScrollFadeIn);
+    })();
 }); 

@@ -840,3 +840,115 @@ footer .small a:hover {
 .trip-animate.animate {
     animation: fadeInUp 0.8s ease forwards;
 }
+
+/* 苹果风格动画类 */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 为不同内容类型设置不同的动画延迟 - 进一步减小延迟时间 */
+.delay-1 { transition-delay: 0.03s; }
+.delay-2 { transition-delay: 0.06s; }
+.delay-3 { transition-delay: 0.09s; }
+.delay-4 { transition-delay: 0.12s; }
+.delay-5 { transition-delay: 0.15s; }
+
+/* 优化现有的fadein-on-scroll类 - 加快动画速度 */
+.fadein-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.fadein-on-scroll.fadein-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 特殊元素动画 - 适当调整时间 */
+.hero-fade {
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-fade.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.timeline-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 图片和视频的特殊动画 - 加快动画速度和减少延迟 */
+.media-fade {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.media-fade.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 连续图片组的特殊延迟时间 */
+.image-group .media-fade.delay-1 { transition-delay: 0.02s; }
+.image-group .media-fade.delay-2 { transition-delay: 0.04s; }
+.image-group .media-fade.delay-3 { transition-delay: 0.06s; }
+.image-group .media-fade.delay-4 { transition-delay: 0.08s; }
+.image-group .media-fade.delay-5 { transition-delay: 0.1s; }

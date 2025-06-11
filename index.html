@@ -139,29 +139,29 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card story-card">
+                    <div class="card story-card fadein-on-scroll">
                         <img src="images/heritage.jpg" class="card-img-top" alt="祖父辈劳作">
                         <div class="card-body">
-                            <h5 class="card-title">匠心传承 • 品质筑基</h5>
-                            <p class="card-text">1980s ~ 1990s</p>
+                            <h5 class="card-title fadein-on-scroll">匠心传承 • 品质筑基</h5>
+                            <p class="card-text fadein-on-scroll">1980s ~ 1990s</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card story-card">
+                    <div class="card story-card fadein-on-scroll">
                         <img src="images/innovation.jpg" class="card-img-top" alt="科技创新">
                         <div class="card-body">
-                            <h5 class="card-title">产居融合 • 科技创新</h5>
-                            <p class="card-text">2000s ~ 2010s</p>
+                            <h5 class="card-title fadein-on-scroll">产居融合 • 科技创新</h5>
+                            <p class="card-text fadein-on-scroll">2000s ~ 2010s</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card story-card">
+                    <div class="card story-card fadein-on-scroll">
                         <img src="images/culture1.jpg" class="card-img-top" alt="文旅融合">
                         <div class="card-body">
-                            <h5 class="card-title">农旅融合 • 生态未来</h5>
-                            <p class="card-text">2020s ~ 至今</p>
+                            <h5 class="card-title fadein-on-scroll">农旅融合 • 生态未来</h5>
+                            <p class="card-text fadein-on-scroll">2020s ~ 至今</p>
                         </div>
                     </div>
                 </div>
@@ -212,34 +212,34 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="tour-card">
+                    <div class="tour-card fadein-on-scroll">
                         <a href="countryside-picking.html" class="tour-image picking">
                             <div class="content-wrapper">
-                                <h3>金桃采摘</h3>
-                                <p class="tour-description">亲手体验自然馈赠，尽享香甜丰收的喜悦</p>
-                                <button class="btn btn-success">立即预约</button>
+                                <h3 class="fadein-on-scroll">金桃采摘</h3>
+                                <p class="tour-description fadein-on-scroll">亲手体验自然馈赠，尽享香甜丰收的喜悦</p>
+                                <button class="btn btn-success fadein-on-scroll">立即预约</button>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="tour-card">
+                    <div class="tour-card fadein-on-scroll">
                         <a href="countryside-culture.html" class="tour-image culture">
                             <div class="content-wrapper">
-                                <h3>民俗非遗</h3>
-                                <p class="tour-description">沉浸古韵传承，感受流淌千年的乡土文化魅力</p>
-                                <button class="btn btn-success">立即预约</button>
+                                <h3 class="fadein-on-scroll">民俗非遗</h3>
+                                <p class="tour-description fadein-on-scroll">沉浸古韵传承，感受流淌千年的乡土文化魅力</p>
+                                <button class="btn btn-success fadein-on-scroll">立即预约</button>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="tour-card">
+                    <div class="tour-card fadein-on-scroll">
                         <a href="countryside-homestay.html" class="tour-image homestay">
                             <div class="content-wrapper">
-                                <h3>特色民宿</h3>
-                                <p class="tour-description">栖居山水之间，体验慢生活中的诗意与温度</p>
-                                <button class="btn btn-success">立即预定</button>
+                                <h3 class="fadein-on-scroll">特色民宿</h3>
+                                <p class="tour-description fadein-on-scroll">栖居山水之间，体验慢生活中的诗意与温度</p>
+                                <button class="btn btn-success fadein-on-scroll">立即预定</button>
                             </div>
                         </a>
                     </div>
@@ -494,6 +494,29 @@
       offsetPx = imgWidth * showCount;
       updateOffsetPx(offsetPx);
       frameId = requestAnimationFrame(animate);
+    })();
+    </script>
+    <script>
+    (function() {
+      // 支持分组渐进式动画
+      function onScrollFadeIn() {
+        var elements = document.querySelectorAll('.fadein-on-scroll');
+        var windowHeight = window.innerHeight;
+        elements.forEach(function(el, idx) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < windowHeight * 0.95 && rect.bottom > 0) {
+            // 增加延迟，分组渐进
+            el.style.transitionDelay = (idx * 0.08) + 's';
+            el.classList.add('fadein-visible');
+          } else {
+            el.classList.remove('fadein-visible');
+            el.style.transitionDelay = '';
+          }
+        });
+      }
+      document.addEventListener('scroll', onScrollFadeIn, { passive: true });
+      window.addEventListener('resize', onScrollFadeIn);
+      window.addEventListener('DOMContentLoaded', onScrollFadeIn);
     })();
     </script>
 </body>
